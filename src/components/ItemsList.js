@@ -18,7 +18,8 @@ class ItemsList extends React.Component{
         const type = this.props.items.type;
         
         return this.props.items.searchResults.map(video => {
-            return (    
+            return (  
+                <div className="col-xs-6 col-sm-3">
                 <div 
                  onClick={() =>this.fetchItem(video.id, type)}
                  key={video.id}
@@ -37,7 +38,8 @@ class ItemsList extends React.Component{
                                 {this.editDescription(video.overview)}
                             </p>
                         </div>
-                </div>       
+                </div>   
+                </div>      
             );
         })
     }
@@ -47,8 +49,7 @@ class ItemsList extends React.Component{
             return null;
         }
         return(
-
-            <div className="row"  style={{display:'flex', textAlign:'center', alignItems:'stretch', marginTop:'30px'}}>
+            <div className="row" style={{columns: 3,display:'flex', textAlign:'center', alignItems:'stretch', marginTop:'30px'}} >
                 {this.renderSearchResults()}
             </div>
         );
