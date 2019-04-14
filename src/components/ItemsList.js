@@ -22,7 +22,7 @@ class ItemsList extends React.Component{
                 <div 
                  onClick={() =>this.fetchItem(video.id, type)}
                  key={video.id}
-                 className="card"
+                 className="card col-sd-6"
                  style = {{width:'16rem', height:'550px', cursor:'pointer', margin:'10px'}}
                  >
                     <img 
