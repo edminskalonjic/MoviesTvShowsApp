@@ -20,25 +20,25 @@ class ItemsList extends React.Component{
         return this.props.items.searchResults.map(video => {
             return (  
                 <div className="col-xs-6 col-sm-3" key={video.id}>
-                <div 
-                 onClick={() =>this.fetchItem(video.id, type)}
-                 key={video.id}
-                 className="card col-sd-6"
-                 style = {{width:'16rem', height:'550px', cursor:'pointer', margin:'10px'}}
-                 >
-                    <img 
-                    src={`${imgURL}${video.poster_path ? video.poster_path : video.backdrop_path}`} 
-                    className="card-img-top" alt="..." 
-                    />
-                        <div className="card-body">
-                            <h5 className="card-title">
-                                {video.title ? video.title : video.name}
-                            </h5>
-                            <p className="card-text">
-                                {this.editDescription(video.overview)}
-                            </p>
-                        </div>
-                </div>   
+                    <div 
+                    onClick={() =>this.fetchItem(video.id, type)}
+                    key={video.id}
+                    className="card col-sd-6"
+                    style = {{width:'16rem', height:'550px', cursor:'pointer', margin:'10px'}}
+                    >
+                        <img 
+                        src={`${imgURL}${video.poster_path ? video.poster_path : video.backdrop_path}`} 
+                        className="card-img-top" alt="..." 
+                        />
+                            <div className="card-body">
+                                <h5 className="card-title">
+                                    {video.title ? video.title : video.name}
+                                </h5>
+                                <p className="card-text">
+                                    {this.editDescription(video.overview)}
+                                </p>
+                            </div>
+                    </div>   
                 </div>      
             );
         })
