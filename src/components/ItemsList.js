@@ -19,7 +19,7 @@ class ItemsList extends React.Component{
         
         return this.props.items.searchResults.map(video => {
             return (  
-                <div className="col-xs-6 col-sm-3">
+                <div className="col-xs-6 col-sm-3" key={video.id}>
                 <div 
                  onClick={() =>this.fetchItem(video.id, type)}
                  key={video.id}
