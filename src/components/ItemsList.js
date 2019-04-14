@@ -23,7 +23,7 @@ class ItemsList extends React.Component{
                  onClick={() =>this.fetchItem(video.id, type)}
                  key={video.id}
                  className="card"
-                 style = {{width:'16rem', height:'550px', cursor:'pointer'}}
+                 style = {{width:'16rem', height:'550px', cursor:'pointer', margin:'10px'}}
                  >
                     <img 
                     src={`${imgURL}${video.poster_path ? video.poster_path : video.backdrop_path}`} 
@@ -47,7 +47,8 @@ class ItemsList extends React.Component{
             return null;
         }
         return(
-            <div className="card-columns" style={{textAlign:'center', alignItems:'stretch', marginTop:'30px'}}>
+
+            <div className="row"  style={{display:'flex', textAlign:'center', alignItems:'stretch', marginTop:'30px'}}>
                 {this.renderSearchResults()}
             </div>
         );
