@@ -30,12 +30,10 @@ class App extends React.Component{
         if(this.timeout){
             clearTimeout(this.timeout);
         }        
-        if(newSearchTerm.length >2 || this.state.searchTerm.length >2){
-            this.timeout = setTimeout(() => {
-                //Do not fetch if the old and new search term length is smaller than 2!!
-                this.fetchResultsOnChange(this.state.selectedTabOption, newSearchTerm);
-            }, 1000); 
-        }    
+        this.timeout = setTimeout(() => {
+            //Do not fetch if the old and new search term length is smaller than 2!!
+            this.fetchResultsOnChange(this.state.selectedTabOption, newSearchTerm);
+        }, 1000);   
     }
 
     fetchOnTabChange(newSelectedTabOption){
