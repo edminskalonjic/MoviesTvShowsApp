@@ -19,7 +19,7 @@ class App extends React.Component{
     }
 
     fetchResultsOnChange(selectedTabOption, searchTerm){
-        if(searchTerm.length < 3){
+        if(searchTerm.trim().length < 3){
             this.props.fetchTopItems(selectedTabOption);
         }else{
             this.props.searchAndFetchItems(searchTerm, selectedTabOption);
